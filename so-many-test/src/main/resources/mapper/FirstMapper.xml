@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.siemens.allkindsoftest.mapper.FirstMapper" >
+    <resultMap id="BaseResultMap" type="com.siemens.allkindsoftest.model.FirstModel" >
+        <constructor >
+            <idArg column="id" jdbcType="INT" javaType="java.lang.Integer" />
+            <arg column="tag" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="value" jdbcType="DOUBLE" javaType="java.lang.Double" />
+            <arg column="time" jdbcType="VARCHAR" javaType="java.lang.String" />
+        </constructor>
+    </resultMap>
+    <sql id="Base_Column_List" >
+        id, tag, value, time
+    </sql>
+
+    <!--<select id="selectByProjectAndRegex" resultType="com.siemens.dasheng.web.model.CalculationSensor" >-->
+        <!--select id, cscode, name, description, active, exp, creater, createtime, modifier, modifytime,-->
+        <!--projectid, reserve02, reserve03-->
+        <!--from calculation_sensor where projectid = #{projectid} AND active = 1-->
+        <!--<if test="sSearch != '' and searchableArray != '' " >-->
+            <!--<bind name="s_Search" value="sSearch"/>-->
+            <!--and-->
+            <!--CONCAT(${searchableArray}) like CONCAT('%','${s_Search}','%')-->
+        <!--</if>-->
+    <!--</select>-->
+
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<c3p0-config>  
+    <named-config name="myc3p0xml">  
+        <!--<property name="driverClass">com.osisoft.jdbc.Driver</property>  -->
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:pioledb://192.168.1.133/Data Source=localhost;Integrated Security=SSPI</property>
+		<!--<property name="jdbcUrl">jdbc:mysql://192.168.0.34:3306/siesammvp?characterEncoding=utf8</property>-->
+        <property name="user">dasheng</property>
+        <property name="password">12345678</property>
+		
+		<property name="initialPoolSize">10</property>
+        <property name="maxPoolSize">300</property>
+        <property name="minPoolSize">5</property>   
+        <property name="maxIdleTime">150</property>  
+		<property name="acquireIncrement">3</property>
+		
+		<parameter>
+		<name>testConnectionOnCheckin</name>
+		<value>true</value>
+		</parameter>
+		
+		<parameter>
+		<name>idleConnectionTestPeriod</name>
+		<value>60</value>
+		</parameter>
+    </named-config>  
+</c3p0-config>  
